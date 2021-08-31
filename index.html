@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Survey Form</title>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="jquery-3.6.0.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="headcontent">
+            <h1 id="heading">FOOD PREFERENCE SURVEY FORM</h1>
+        </div>
+        <div class="row" id="inputform">
+            <div class="input col-sm-12">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="fname">First Name : </label><br/>
+                            <input type="text" id="fname" name="FirstName" placeholder="First Name">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="lname">Last Name : </label><br/>
+                            <input type="text" id="lname" name="LastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="addr">Address : </label><br/>
+                            <input type="text" id="addr" name="Address" placeholder="Address">
+                        </div>                
+                        <div class="col-md-6 mb-4">
+                            <label for="pin">PinCode : </label><br/>
+                            <input type="text" id="pin" name="PinCode" placeholder="PinCode">
+                        </div>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <legend> Gender :</legend>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="male">Male</label>
+                                    <input class="form-check-input" type="radio" id="male" name="gender" value="option1" checked>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="female">Female</label>
+                                    <input class="form-check-input" type="radio" id="female" name="gender" value="option2">
+                                </div>  
+                                <div class="form-check">
+                                    <label class="form-check-label" for="Others">Others</label>
+                                    <input class="form-check-input" type="radio" id="Others" name="gender" value="option3">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <legend>Choices of Food <p id="choicecondn">Choose atleast 2 out of 5 preferences : </p></legend>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="indian">Indian</label>
+                                    <input class="form-check-input" type="checkbox" id="indian" name="choice">
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="conti">Continental</label>
+                                    <input class="form-check-input" type="checkbox" id="conti" name="choice">
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="chin">Chinese</label>
+                                    <input class="form-check-input" type="checkbox" id="chin" name="choice">
+                                </div>  
+                                <div class="form-check">
+                                    <label class="form-check-label" for="vegan">Vegan</label>
+                                    <input class="form-check-input" type="checkbox" id="vegan" name="choice">
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="ital">Italian</label>
+                                    <input class="form-check-input" type="checkbox" id="ital" name="choice">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="state">State : </label><br/>
+                            <input type="text" id="state" name="Address" placeholder="State">
+                        </div>                
+                        <div class="col-md-6 mb-4">
+                            <label for="country">Country : </label><br/>
+                            <input type="text" id="country" name="PinCode" placeholder="Country">
+                        </div>
+                    </div>
+                    <div class="col-auto" id="submit">
+                        <button type="submit" class="btn btn-primary mb-2" onclick="pasteItem()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="disptable">
+            <div class="col-sm-">
+                <table class="table" id="form-result">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">PinCode</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Choice of Food</th>
+                            <th scope="col">State</th>
+                            <th scope="col">Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
